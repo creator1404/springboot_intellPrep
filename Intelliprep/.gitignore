@@ -1,0 +1,33 @@
+# Maven build output - THIS was causing your secret leak
+target/
+
+# Environment variables - NEVER commit these
+.env
+.env.local
+
+# Application properties with secrets (keep only the template version)
+# src/main/resources/application.properties  ← don't ignore this, it should have ${placeholders}
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific
+spring-shell.log
